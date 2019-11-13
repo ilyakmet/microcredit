@@ -79,7 +79,7 @@ contract Microcredit is IMicrocredit, Ownable {
 
         emit Cancel(user, amount, expires, nonce, sig, hash);
 
-        return false;
+        return true;
     }
 
     function refund(
