@@ -1,0 +1,9 @@
+{
+    "extends": "solhint:recommended",
+    "rules": {
+      "prettier/prettier": "error",
+      "max-line-length": ["error",99],
+      "compiler-version": ["error", "^0.5.0"]
+    },
+    "plugins": ["prettier"]
+  }
