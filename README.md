@@ -1,0 +1,3 @@
+# microcredit
+
+ Microcredit Solidity Prototype
