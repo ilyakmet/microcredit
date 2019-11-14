@@ -47,8 +47,6 @@ contract Microcredit is IMicrocredit, Ownable {
             abi.encodePacked(this, amount, expires, nonce)
         );
 
-        require(Utils.checkSig(user, hash, sig), "Ivalid sig");
-
         if (Utils.checkSig(user, hash, sig)) {
             debts[user][hash] = approveAmount;
 

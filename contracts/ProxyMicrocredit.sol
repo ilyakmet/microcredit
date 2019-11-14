@@ -10,7 +10,7 @@ contract ProxyMicrocredit is Ownable, NameRegistry {
 
     IMicrocredit MicrocreditInstance;
 
-    function setInstance(string calldata name) external returns (uint16) {
+    function setInstance(string calldata name) external onlyOwner returns (uint16) {
         bytes32 hash = keccak256(abi.encodePacked(name));
 
         (address instanceAddress, uint16 instanceVersion) = NameRegistry
@@ -56,9 +56,9 @@ contract ProxyMicrocredit is Ownable, NameRegistry {
             sig
         );
 
-        if (isComplete) {
-            user.transfer(msg.value);
-        }
+        require(isComplete, "Invalid sig");
+
+        user.transfer(msg.value);
 
         return true;
     }
