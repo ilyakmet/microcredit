@@ -1,0 +1,33 @@
+{
+  "name": "microcredit",
+  "version": "1.0.0",
+  "description": "Microcredit Solidity Prototype",
+  "files": [
+    "/contracts/**/*.sol"
+  ],
+  "scripts": {
+    "test": "npx truffle test --show-events",
+    "coverage": "npx solidity-coverage",
+    "prettier:solidity": "npx prettier --write contracts/*.sol"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyakmet/microcredit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilyakmet/microcredit/issues"
+  },
+  "homepage": "https://github.com/ilyakmet/microcredit#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@openzeppelin/contracts": "^2.3.0",
+    "prettier": "^1.18.2",
+    "prettier-plugin-solidity": "^1.0.0-alpha.34",
+    "solhint-plugin-prettier": "0.0.3",
+    "solidity-coverage": "^0.6.7",
+    "truffle": "^5.0.42"
+  }
+}
